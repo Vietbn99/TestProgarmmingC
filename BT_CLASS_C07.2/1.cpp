@@ -4,17 +4,15 @@
 
 #include <stdio.h>
 #include <math.h>
-int main()
+// ham xuat cac so nguyen to
+void snt(int n)
 {
-    int n;
     bool dem = true;
-    printf("Nhap n: ");
-    scanf("%d", &n);
     if (n > 2)
     {
-        printf("2\t");
+        printf("\t2\t");
     }
-    for (int i = 2; i <= n; i++)
+    for (int i = 2; i < n; i++)
     {
         dem = true;
         for (int j = 2; j <= sqrt(n); j++)
@@ -29,5 +27,15 @@ int main()
             printf("%d\t", i);
         }
     }
+}
+
+int main()
+{
+    int n;
+    printf("Nhap n: ");
+    scanf("%d", &n);
+    printf("Sau day cac so nguyen to nho hon %d\n", n);
+    snt(n);
+    printf("\n");
     return 0;
 }
